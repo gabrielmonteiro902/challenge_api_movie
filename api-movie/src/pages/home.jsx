@@ -25,12 +25,14 @@ const home = () => {
  getTopRatedMovies(topRatedUrl);
 
     },[]);
+ 
+
 
     return (
         <div className="Libmovie">
             <h2 className="title">Best Movies</h2>
             <div className="container-movies">
-                {topMovies.length === 0 && <p className="Loading">Loading...</p> }
+                {topMovies.length === 0 && <p>Loading...</p>}
                 {topMovies.length > 0 &&
             topMovies.map((movie) => <MovieCards key={movie.id} movie={movie}/>)}
             </div>
